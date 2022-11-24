@@ -1,6 +1,21 @@
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali.
+let numeri = []; 
+for(let i = 0; i < 5; i++){
+    numeri[i] = randomIntero(1, 100);
+};
+
+console.log(numeri);
+
+
 // Da lì parte un timer di 30 secondi.
+let tempoS = 30;
+console.log(tempoS);
+let clock = setInterval(timer, 1000);
+
+
+
+
 // Dopo 30 secondi i numeri scompaiono e l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente.
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 // Consigli :
@@ -9,11 +24,29 @@
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 // *fate sempre una cosa alla volta (in quel caso se partite con i prompt potrebbe incasinarsi nelle tempistiche di aggiornamento dom e visualizzazione del prompt stesso [soprattutto in chrome]).
 // Buon divertimento e buon we! 
-let numeri = []; 
-for(let i = 0; i < 5; i++){
-    numeri[i] = randomIntero(1, 100);
-};
-console.log(numeri);
+
+
+
+
+function timer(){
+   
+    if (tempoS == 0){
+        clearInterval(clock);
+    }else{
+        // parte a contare da 29
+        tempoS--;
+        console.log(tempoS);
+    };
+
+    
+}
+
+
+
+
+
+
+
 
 // posts.forEach((element, index, array) => {});
 
